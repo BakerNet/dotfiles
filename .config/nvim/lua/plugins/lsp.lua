@@ -183,9 +183,9 @@ local setup_lsp = function()
     -- Setup neovim lua configuration
     require('neodev').setup()
 
-    -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
+    -- blink.cmp supports additional completion capabilities, so broadcast that to servers
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+    capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 
     -- Ensure the servers above are installed
     local mason_lspconfig = require 'mason-lspconfig'
@@ -206,11 +206,11 @@ local setup_lsp = function()
 
     for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
         local default_diagnostic_handler = vim.lsp.handlers[method]
-        vim.lsp.handlers[method] = function(err, result, context, config)
+        vim.lsp.handlers[method] = function(err, result, context)
             if err ~= nil and err.code == -32802 then
                 return
             end
-            return default_diagnostic_handler(err, result, context, config)
+            return default_diagnostic_handler(err, result, context)
         end
     end
 end
