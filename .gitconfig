@@ -1,0 +1,17 @@
+[user]
+	email = hansbaker90@gmail.com
+	name = BakerNet
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = nvim
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
+[init]
+	defaultBranch = main
