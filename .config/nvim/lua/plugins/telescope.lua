@@ -40,8 +40,7 @@ local setup_keymaps = function()
         })
     end, { desc = '[/] Fuzzily search in current buffer' })
 
-    vim.keymap.set('n', '<leader>ff', require('telescope.builtin').git_files, { desc = '[F]ind project [F]iles' })
-    vim.keymap.set('n', '<leader>fa', require('telescope.builtin').find_files, { desc = '[F]ind [A]ll files' })
+    vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = '[F]ind [F]iles' })
     vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, { desc = '[F]ind [H]elp' })
     vim.keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, { desc = '[F]ind current [W]ord' })
     vim.keymap.set('n', '<leader>fg', require('telescope').extensions.live_grep_args.live_grep_args,
