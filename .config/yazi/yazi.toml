@@ -7,3 +7,6 @@ run  = "git"
 id   = "git"
 name = "*/"
 run  = "git"
+
+[manager]
+show_hidden = true
