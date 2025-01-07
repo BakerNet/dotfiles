@@ -67,7 +67,10 @@ return {
         end
     },
     -- Live Grep args allows include / exclude globs
-    { "nvim-telescope/telescope-live-grep-args.nvim" },
+    {
+        "nvim-telescope/telescope-live-grep-args.nvim",
+        event = "VeryLazy"
+    },
     -- Fuzzy Finder Algorithm which requires local dependencies to be built.
     -- Only load if `make` is available. Make sure you have the system
     -- requirements installed.
@@ -82,6 +85,7 @@ return {
     },
     {
         'aaronhallaert/advanced-git-search.nvim',
+        event = "VeryLazy",
         dependencies = {
             "nvim-telescope/telescope.nvim",
             -- to show diff splits and open commits in browser
@@ -90,7 +94,7 @@ return {
             "tpope/vim-rhubarb",
             -- OPTIONAL: to replace the diff from fugitive with diffview.nvim
             -- (fugitive is still needed to open in browser)
-            -- "sindrets/diffview.nvim",
+            "sindrets/diffview.nvim",
         }
     },
 }

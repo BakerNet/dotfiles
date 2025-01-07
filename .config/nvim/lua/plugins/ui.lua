@@ -61,6 +61,7 @@ return {
     -- Clean visual mode
     {
         'folke/zen-mode.nvim',
+        event = "VeryLazy",
         config = function()
             vim.keymap.set("n", "<leader>zm", function()
                 require("zen-mode").setup {
