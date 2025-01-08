@@ -1,6 +1,9 @@
 [user]
 	email = hansbaker90@gmail.com
 	name = BakerNet
+	signingkey = D5D09FC13A57A315
+[includeIf "hasconfig:remote.*.url:*github.com:multimediallc/**"]
+	path = ~/.gitconfig-mmllc
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
@@ -15,3 +18,7 @@
 	enabled = true
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
