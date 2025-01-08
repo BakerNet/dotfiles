@@ -18,6 +18,7 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=0
 
 # End of lines added by compinstall
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias vim="nvim"
 
 # Vi mode stuff
 INSERT_MODE_INDICATOR="%F{yellow}+%f"
