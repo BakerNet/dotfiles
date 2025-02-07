@@ -21,3 +21,6 @@ else
     start_agent 
 fi
 
+if [ -f /usr/local/bin/chrome ]; then
+    export BROWSER=chrome
+fi
