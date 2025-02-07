@@ -54,7 +54,7 @@ return {
             completion = {
                 list = {
                     max_items = 20,
-                    selection = 'manual',
+                    selection = { preselect = false, auto_insert = true },
                 },
                 -- Show documentation when selecting a completion item
                 documentation = { auto_show = true, auto_show_delay_ms = 200 },

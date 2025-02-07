@@ -2,6 +2,10 @@
 unsetopt beep
 setopt HIST_SAVE_NO_DUPS
 
+# rust completions
+if command -v rustc >/dev/null 2>&1; then
+  export fpath=("$(rustc --print sysroot)"/share/zsh/site-functions $fpath)
+fi
 autoload -Uz compinit
 compinit
 
