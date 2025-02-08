@@ -39,6 +39,7 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd python_venv
 python_venv
 
+source "$ZDOTDIR/.zsh_aliases"
 if [[ -f "$HOME/.zshrc_private" ]]; then
   source "$HOME/.zshrc_private"
 fi

@@ -3,7 +3,11 @@
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
-    vim.hl.on_yank()
+    if vim.hl ~= nil then
+      vim.hl.on_yank()
+    else
+      vim.highlight.on_yank()
+    end
   end,
   group = highlight_group,
   pattern = '*',

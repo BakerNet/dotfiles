@@ -33,8 +33,6 @@ return {
                 { buffer = bufnr, desc = '[G]it [U]ndo (Reset) Hunk' })
             vim.keymap.set('n', '<leader>gah', require('gitsigns').stage_hunk,
                 { buffer = bufnr, desc = '[G]it [A]dd Hunk' })
-            vim.keymap.set('n', '<leader>gr', require('gitsigns').undo_stage_hunk,
-                { buffer = bufnr, desc = '[G]it [R]eset (Undo previous) Hunk' })
             vim.keymap.set('n', '<leader>gs', '<Cmd>Git status<CR>', { desc = '[G]it [S]tatus' })
             vim.keymap.set('n', '<leader>gM', '<Cmd>Git checkout origin/master<CR>', { desc = '[G]it checkout [M]aster' })
             vim.keymap.set('n', '<leader>gSS', '<Cmd>Git stash<CR>', { desc = '[G]it [S]tash' })
@@ -46,6 +44,8 @@ return {
             vim.keymap.set('n', '<leader>gP', '<Cmd>Git pull<CR>', { desc = '[G]it [P]ull' })
             vim.keymap.set('n', '<leader>gf', '<Cmd>Git fetch<CR>', { desc = '[G]it [F]etch' })
             vim.keymap.set('n', '<leader>gB', ':Git switch -c ', { desc = '[G]it Create [B]ranch' })
+            vim.keymap.set('n', '<leader>gr', ':Git reset ', { desc = '[G]it [R]eset' })
+            vim.keymap.set('n', '<leader>gR', ':Git rebase -i ', { desc = '[G]it [R]ebase' })
         end
     },
     {
