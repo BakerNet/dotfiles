@@ -1,0 +1,6 @@
+karabiner-elements
+unnaturalscrollwheels
+alt-tab
+ghostty
+leader-key
+rectangle

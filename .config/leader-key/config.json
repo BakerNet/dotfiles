@@ -1,0 +1,73 @@
+{
+  "label" : "Main",
+  "key" : "⚪️",
+  "type" : "group",
+  "actions" : [
+    {
+      "label" : "",
+      "key" : "1",
+      "value" : "/Applications/Ghostty.app",
+      "type" : "application"
+    },
+    {
+      "type" : "application",
+      "key" : "2",
+      "label" : "",
+      "value" : "/Applications/Google Chrome.app"
+    },
+    {
+      "label" : "",
+      "type" : "application",
+      "key" : "3",
+      "value" : "/Applications/Obsidian.app"
+    },
+    {
+      "type" : "application",
+      "value" : "/Applications/Discord.app",
+      "label" : "",
+      "key" : "4"
+    },
+    {
+      "key" : "5",
+      "type" : "application",
+      "label" : "",
+      "value" : "/Applications/Spotify.app"
+    },
+    {
+      "label" : "",
+      "key" : "6",
+      "value" : "",
+      "type" : "application"
+    },
+    {
+      "type" : "application",
+      "value" : "",
+      "label" : "",
+      "key" : "7"
+    },
+    {
+      "key" : "8",
+      "value" : "",
+      "type" : "application",
+      "label" : ""
+    },
+    {
+      "label" : "",
+      "type" : "application",
+      "value" : "",
+      "key" : "9"
+    },
+    {
+      "value" : "/System/Applications/System Settings.app",
+      "label" : "",
+      "key" : "s",
+      "type" : "application"
+    },
+    {
+      "value" : "",
+      "label" : "",
+      "key" : "f",
+      "type" : "folder"
+    }
+  ]
+}
