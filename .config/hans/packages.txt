@@ -1,5 +1,4 @@
-base
-base-devel
+curl
 cloudflared
 deno
 fd
