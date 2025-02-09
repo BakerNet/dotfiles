@@ -95,12 +95,13 @@ local setup_lsp = function()
             vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
         end
 
-        nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-        nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-
+        -- Remove these after neovim 0.11 (builtin)
+        nmap('grn', vim.lsp.buf.rename, '[R]e[n]ame')
+        nmap('gra', vim.lsp.buf.code_action, '[C]ode [A]ction')
+        nmap('gri', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
+        -- End Remove after neovim 0.11
+        nmap('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
         nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-        nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-        nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
         nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
         nmap('<leader>sd', require('telescope.builtin').lsp_document_symbols, '[S]ymbols in [D]ocument')
         nmap('<leader>sw', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[S]ymbols in [W]orkspace')

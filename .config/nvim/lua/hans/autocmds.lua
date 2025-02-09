@@ -6,6 +6,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     if vim.hl ~= nil then
       vim.hl.on_yank()
     else
+      -- Remove after neovim 0.11 (deprecated)
       vim.highlight.on_yank()
     end
   end,
