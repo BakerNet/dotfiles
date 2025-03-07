@@ -14,6 +14,11 @@ local setup_telescope = function()
                 prompt_position = "top",
             },
         },
+        pickers = {
+            find_files = {
+                hidden = true,
+            },
+        },
         extensions = {
             advanced_git_search = {
                 -- fugitive or diffview

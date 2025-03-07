@@ -34,6 +34,7 @@ return {
             vim.keymap.set('n', '<leader>gah', require('gitsigns').stage_hunk,
                 { buffer = bufnr, desc = '[G]it [A]dd Hunk' })
             vim.keymap.set('n', '<leader>gs', '<Cmd>Git status<CR>', { desc = '[G]it [S]tatus' })
+            vim.keymap.set('n', '<leader>gm', '<Cmd>Git checkout origin/main<CR>', { desc = '[G]it checkout [M]ain' })
             vim.keymap.set('n', '<leader>gM', '<Cmd>Git checkout origin/master<CR>', { desc = '[G]it checkout [M]aster' })
             vim.keymap.set('n', '<leader>gSS', '<Cmd>Git stash<CR>', { desc = '[G]it [S]tash' })
             vim.keymap.set('n', '<leader>gSP', '<Cmd>Git stash pop<CR>', { desc = '[G]it [S]tash [P]op' })

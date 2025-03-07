@@ -24,3 +24,7 @@ fi
 if [ -f /usr/local/bin/chrome ]; then
     export BROWSER=chrome
 fi
+
+# Setting for the new UTF-8 terminal support
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
