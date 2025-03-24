@@ -4,4 +4,10 @@ return {
 
     -- Change history
     { 'mbbill/undotree' },
+
+    -- Slidedeck presentation
+    {
+        'BakerNet/present.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+    },
 }
