@@ -203,6 +203,25 @@ local setup_lsp = function()
                 settings = servers[server_name],
             }
         end,
+        ts_ls = function(server_name)
+            local nvim_lsp = require('lspconfig')
+            nvim_lsp.ts_ls.setup {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = servers[server_name],
+                root_dir = nvim_lsp.util.root_pattern("package.json"),
+                single_file_support = false
+            }
+        end,
+        denols = function(server_name)
+            local nvim_lsp = require('lspconfig')
+            nvim_lsp.denols.setup {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = servers[server_name],
+                root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
+            }
+        end,
     }
 
     for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
