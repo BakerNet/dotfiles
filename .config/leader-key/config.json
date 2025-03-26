@@ -1,61 +1,59 @@
 {
-  "label" : "Main",
-  "key" : "⚪️",
   "type" : "group",
   "actions" : [
     {
-      "label" : "",
       "key" : "1",
       "value" : "/Applications/Ghostty.app",
-      "type" : "application"
-    },
-    {
-      "type" : "application",
-      "key" : "2",
-      "label" : "",
-      "value" : "/Applications/Google Chrome.app"
-    },
-    {
-      "label" : "",
-      "type" : "application",
-      "key" : "3",
-      "value" : "/Applications/Obsidian.app"
-    },
-    {
-      "type" : "application",
-      "value" : "/Applications/Discord.app",
-      "label" : "",
-      "key" : "4"
-    },
-    {
-      "key" : "5",
-      "type" : "application",
-      "label" : "",
-      "value" : "/Applications/Spotify.app"
-    },
-    {
-      "label" : "",
-      "key" : "6",
-      "value" : "",
-      "type" : "application"
-    },
-    {
-      "type" : "application",
-      "value" : "",
-      "label" : "",
-      "key" : "7"
-    },
-    {
-      "key" : "8",
-      "value" : "",
       "type" : "application",
       "label" : ""
     },
     {
+      "key" : "2",
+      "label" : "",
+      "value" : "/Applications/Google Chrome.app",
+      "type" : "application"
+    },
+    {
+      "label" : "",
+      "value" : "/Applications/Obsidian.app",
+      "key" : "3",
+      "type" : "application"
+    },
+    {
+      "value" : "/Applications/Discord.app",
       "label" : "",
       "type" : "application",
+      "key" : "4"
+    },
+    {
+      "key" : "5",
+      "label" : "",
+      "type" : "application",
+      "value" : "/Applications/Spotify.app"
+    },
+    {
+      "key" : "6",
+      "type" : "application",
       "value" : "",
-      "key" : "9"
+      "label" : ""
+    },
+    {
+      "key" : "7",
+      "type" : "application",
+      "label" : "",
+      "value" : ""
+    },
+    {
+      "type" : "application",
+      "key" : "8",
+      "label" : "",
+      "value" : ""
+    },
+    {
+      "key" : "9",
+      "label" : "",
+      "type" : "application",
+      "value" : ""
     },
     {
       "value" : "/System/Applications/System Settings.app",
@@ -64,10 +62,12 @@
       "type" : "application"
     },
     {
-      "value" : "",
-      "label" : "",
+      "type" : "application",
       "key" : "f",
-      "type" : "folder"
+      "value" : "/System/Library/CoreServices/Finder.app",
+      "label" : ""
     }
-  ]
+  ],
+  "label" : "Main",
+  "key" : "⚪️"
 }
