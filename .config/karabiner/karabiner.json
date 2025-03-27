@@ -7,18 +7,17 @@
                         "description": "CAPS to Esc / Ctrl",
                         "manipulators": [
                             {
-                                "from": { "key_code": "caps_lock" },
-                                "to": { "key_code": "left_control" },
-                                "to_if_alone": { "key_code": "escape" },
-                                "type": "basic",
                                 "conditions": [
                                     {
-                                        "type": "device_if",
-                                        "identifiers": [
-                                            { "is_built_in_keyboard": true }
-                                        ]
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
                                     }
-                                ]
+                                ],
+                                "from": { "key_code": "caps_lock" },
+                                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
+                                "to": { "key_code": "left_control" },
+                                "to_if_alone": { "key_code": "escape" },
+                                "type": "basic"
                             }
                         ]
                     }
