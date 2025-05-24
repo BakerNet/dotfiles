@@ -16,3 +16,5 @@ alias gB="git switch -c"
 alias gr="git reset"
 alias gR="git rebase -i"
 alias gd="git diff"
+
+alias present="nvim -c PresentStart"
