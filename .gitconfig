@@ -10,10 +10,20 @@
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
+[url "git@github.com:multimediallc/"]
+    insteadOf = "gmm:"
+[url "https://github.com/multimediallc/"]
+    insteadOf = "mm:"
+[url "git@github.com:BakerNet/"]
+    insteadOf = "gbn:"
+[url "https://github.com/BakerNet/"]
+    insteadOf = "bn:"
 [core]
 	editor = nvim
 [pull]
 	rebase = true
+[rebase]
+	autoStash = true
 [push]
 	autoSetupRemote = true
 [rerere]
