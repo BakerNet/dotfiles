@@ -7,9 +7,9 @@
 [includeIf "hasconfig:remote.*.url:https://github.com/multimediallc/**"]
 	path = ~/.gitconfig-mmllc
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/usr/bin/env gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/usr/bin/env gh auth git-credential
 [url "git@github.com:multimediallc/"]
     insteadOf = "gmm:"
 [url "https://github.com/multimediallc/"]
@@ -20,6 +20,7 @@
     insteadOf = "bn:"
 [core]
 	editor = nvim
+	excludesFile = ~/.gitignore
 [pull]
 	rebase = true
 [rebase]

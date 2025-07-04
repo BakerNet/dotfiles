@@ -3,7 +3,12 @@ return {
     'christoomey/vim-tmux-navigator',
 
     -- Change history
-    { 'mbbill/undotree' },
+    {
+        'mbbill/undotree',
+        keys = {
+            { '<leader>tu', vim.cmd.UndotreeToggle, desc = '[T]oggle [U]ndoTree' },
+        },
+    },
 
     -- Slidedeck presentation
     {

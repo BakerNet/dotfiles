@@ -1,73 +1,73 @@
 {
+  "key" : "⚪️",
+  "type" : "group",
   "label" : "Main",
   "actions" : [
     {
-      "label" : "",
+      "value" : "/Applications/Ghostty.app",
       "key" : "1",
-      "type" : "application",
-      "value" : "/Applications/Ghostty.app"
+      "label" : "",
+      "type" : "application"
     },
     {
-      "type" : "application",
-      "value" : "/Applications/Google Chrome.app",
+      "label" : "",
       "key" : "2",
-      "label" : ""
+      "type" : "application",
+      "value" : "/Applications/Google Chrome.app"
     },
     {
       "value" : "/Applications/Obsidian.app",
-      "type" : "application",
       "label" : "",
+      "type" : "application",
       "key" : "3"
     },
     {
-      "key" : "4",
-      "type" : "application",
+      "value" : "/Applications/Discord.app",
       "label" : "",
-      "value" : "/Applications/Discord.app"
+      "key" : "4",
+      "type" : "application"
     },
     {
       "type" : "application",
-      "value" : "/Applications/Spotify.app",
       "label" : "",
+      "value" : "/Applications/Spotify.app",
       "key" : "5"
     },
     {
-      "label" : "",
       "key" : "6",
       "value" : "",
+      "label" : "",
       "type" : "application"
     },
     {
-      "value" : "",
       "key" : "7",
       "type" : "application",
-      "label" : ""
+      "label" : "",
+      "value" : ""
     },
     {
       "key" : "8",
+      "type" : "application",
       "value" : "",
-      "label" : "",
-      "type" : "application"
+      "label" : ""
     },
     {
-      "value" : "",
       "type" : "application",
+      "value" : "",
       "label" : "",
       "key" : "9"
     },
     {
+      "type" : "application",
       "value" : "/System/Applications/System Settings.app",
       "label" : "",
-      "key" : "s",
-      "type" : "application"
+      "key" : "s"
     },
     {
-      "label" : "",
-      "value" : "",
+      "value" : "/System/Library/CoreServices/Finder.app",
       "key" : "f",
-      "type" : "folder"
+      "type" : "application",
+      "label" : ""
     }
-  ],
-  "type" : "group",
-  "key" : "⚪️"
+  ]
 }
