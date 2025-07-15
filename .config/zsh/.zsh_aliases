@@ -18,3 +18,4 @@ alias gR="git rebase -i"
 alias gd="git diff"
 
 alias present="nvim -c PresentStart"
+alias myip="curl ifconfig.co"

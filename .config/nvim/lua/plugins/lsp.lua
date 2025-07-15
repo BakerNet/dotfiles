@@ -188,40 +188,37 @@ local setup_lsp = function()
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 
+    -- Configure LSP servers using native vim.lsp.config() API
+    for server_name, server_config in pairs(servers) do
+        if server_name == 'ts_ls' then
+            vim.lsp.config(server_name, {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = server_config,
+                root_dir = vim.fs.root(0, { "package.json" }),
+                single_file_support = false
+            })
+        elseif server_name == 'denols' then
+            vim.lsp.config(server_name, {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = server_config,
+                root_dir = vim.fs.root(0, { "deno.json", "deno.jsonc" }),
+            })
+        else
+            vim.lsp.config(server_name, {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = server_config,
+            })
+        end
+    end
+
     -- Ensure the servers above are installed
     local mason_lspconfig = require 'mason-lspconfig'
 
     mason_lspconfig.setup {
         ensure_installed = vim.tbl_keys(servers),
-    }
-
-    mason_lspconfig.setup_handlers {
-        function(server_name)
-            require('lspconfig')[server_name].setup {
-                capabilities = capabilities,
-                on_attach = on_attach,
-                settings = servers[server_name],
-            }
-        end,
-        ts_ls = function(server_name)
-            local nvim_lsp = require('lspconfig')
-            nvim_lsp.ts_ls.setup {
-                capabilities = capabilities,
-                on_attach = on_attach,
-                settings = servers[server_name],
-                root_dir = nvim_lsp.util.root_pattern("package.json"),
-                single_file_support = false
-            }
-        end,
-        denols = function(server_name)
-            local nvim_lsp = require('lspconfig')
-            nvim_lsp.denols.setup {
-                capabilities = capabilities,
-                on_attach = on_attach,
-                settings = servers[server_name],
-                root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
-            }
-        end,
     }
 
     for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do

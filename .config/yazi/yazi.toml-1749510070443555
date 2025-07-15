@@ -8,5 +8,5 @@ id   = "git"
 name = "*/"
 run  = "git"
 
-[mgr]
+[manager]
 show_hidden = true
