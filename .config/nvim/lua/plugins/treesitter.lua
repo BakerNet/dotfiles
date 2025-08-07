@@ -70,5 +70,11 @@ return {
         end
     },
     -- Sticky context text
-    { 'nvim-treesitter/nvim-treesitter-context' },
+    {
+        'nvim-treesitter/nvim-treesitter-context',
+        opts = {
+            enabled = true,
+            separator = '=',
+        },
+    },
 }
