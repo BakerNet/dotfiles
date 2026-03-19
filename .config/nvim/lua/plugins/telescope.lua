@@ -9,6 +9,7 @@ local setup_telescope = function()
                     ['<C-d>'] = false,
                 },
             },
+            cache_picker = { num_pickers = 20 },
             sorting_strategy = "ascending",
             layout_config = {
                 prompt_position = "top",
@@ -56,7 +57,9 @@ local setup_keymaps = function()
         { desc = '[F]ind [C]ommit for file' })
     vim.keymap.set({ 'n', 'v' }, '<leader>fl', require('telescope').extensions.advanced_git_search.diff_commit_line,
         { desc = '[F]ind commit for [L]ines' })
+    vim.keymap.set('n', '<leader>fs', require('telescope').extensions.aerial.aerial, { desc = '[F]ind [S]ymbols' })
     vim.keymap.set('n', '<leader>fr', require('telescope.builtin').resume, { desc = '[F]ind [R]esume' })
+    vim.keymap.set('n', '<leader>fp', require('telescope.builtin').pickers, { desc = '[F]ind [P]ickers (resume any)' })
 end
 
 
@@ -101,5 +104,22 @@ return {
             -- (fugitive is still needed to open in browser)
             "sindrets/diffview.nvim",
         }
+    },
+    {
+        'stevearc/aerial.nvim',
+        event = "VeryLazy",
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter',
+            'nvim-telescope/telescope.nvim',
+        },
+        config = function()
+            require('aerial').setup({
+                backends = { 'lsp', 'treesitter' },
+                attach_mode = 'global',
+                open_automatic = false,
+                keymaps = false,
+            })
+            require('telescope').load_extension('aerial')
+        end,
     },
 }

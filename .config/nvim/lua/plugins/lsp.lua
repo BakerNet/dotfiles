@@ -42,7 +42,7 @@ local setup_autoformat = function()
 
             -- Typescript-language-server usually works poorly. Sorry you work with bad languages
             -- You can remove this line if you know what you're doing :)
-            if client.name == 'ts_ls' then
+            if client.name == 'ts_ls' or client.name == 'denols' then
                 return
             end
 
@@ -95,16 +95,16 @@ local setup_lsp = function()
             vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
         end
 
-        -- Remove these after neovim 0.11 (builtin)
-        nmap('grn', vim.lsp.buf.rename, '[R]e[n]ame')
-        nmap('gra', vim.lsp.buf.code_action, '[C]ode [A]ction')
-        nmap('gri', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
-        -- End Remove after neovim 0.11
+        -- Nvim Builtin Defaults
+        -- grn - rename
+        -- gra - code action
+        -- gri - implementation
+        -- grt - type definition
+        -- gO - document symbols
+
+        -- overwrites
         nmap('grr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
         nmap('gd', vim.lsp.buf.definition, '[G]oto [D]efinition')
-        nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
-        nmap('<leader>sd', require('telescope.builtin').lsp_document_symbols, '[S]ymbols in [D]ocument')
-        nmap('<leader>sw', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[S]ymbols in [W]orkspace')
 
         -- See `:help K` for why this keymap
         nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
