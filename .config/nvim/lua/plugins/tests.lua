@@ -1,7 +1,7 @@
 -- Test-related plugins
 return {
     {
-        dir = "~/Projects/test-at-point",
+        'BakerNet/test-at-point.nvim',
         config = function()
             require('test-at-point').setup({
                 -- Key mappings
