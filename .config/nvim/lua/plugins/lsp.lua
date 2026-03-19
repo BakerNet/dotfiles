@@ -154,31 +154,6 @@ local setup_lsp = function()
             diagnosticMode = "openFilesOnly",
             reportMissingTypeStubs = false,
         }
-        -- pylsp = {
-        --     pylsp = {
-        --         plugins = {
-        --             -- formatter options
-        --             black = { enabled = false },
-        --             autopep8 = { enabled = false },
-        --             yapf = { enabled = false },
-        --             -- linter options
-        --             ruff = { enabled = true },
-        --             pylint = { enabled = false, executable = "pylint" },
-        --             pyflakes = { enabled = false },
-        --             pycodestyle = { enabled = false },
-        --             mccabe = { enabled = false },
-        --             flake8 = { enabled = false },
-        --             -- type checker
-        --             pylsp_mypy = { enabled = false },
-        --             -- auto-completion options
-        --             jedi_completion = { fuzzy = true },
-        --             -- import sorting
-        --             isort = { enabled = true },
-        --             -- code actions
-        --             rope_autoimport = { enabled = true },
-        --         },
-        --     },
-        -- },
     }
 
     -- Setup neovim lua configuration
@@ -242,7 +217,7 @@ return {
 
         -- Useful status updates for LSP
         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-        { 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
+        { 'j-hui/fidget.nvim',    tag = 'legacy', opts = {} },
 
         -- Additional lua configuration, makes nvim stuff amazing!
         'folke/neodev.nvim',

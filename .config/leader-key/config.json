@@ -2,67 +2,56 @@
   "actions" : [
     {
       "key" : "1",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Ghostty.app"
     },
     {
       "key" : "2",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Google Chrome.app"
     },
     {
       "key" : "3",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Obsidian.app"
     },
     {
       "key" : "4",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Discord.app"
     },
     {
       "key" : "5",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Spotify.app"
     },
     {
       "key" : "6",
-      "label" : "",
       "type" : "application",
       "value" : ""
     },
     {
       "key" : "7",
-      "label" : "",
       "type" : "application",
       "value" : ""
     },
     {
       "key" : "8",
-      "label" : "",
       "type" : "application",
       "value" : ""
     },
     {
       "key" : "9",
-      "label" : "",
       "type" : "application",
       "value" : ""
     },
     {
       "key" : "s",
-      "label" : "",
       "type" : "application",
       "value" : "/System/Applications/System Settings.app"
     },
     {
       "key" : "f",
-      "label" : "",
       "type" : "application",
       "value" : "/System/Library/CoreServices/Finder.app"
     }

@@ -37,16 +37,17 @@ return {
             ensure_installed = {
                 -- Update this to ensure that you have the debuggers for the langs you want
                 'delve',
+                'codelldb',
             },
         }
 
         -- Basic debugging keymaps, feel free to change to your liking!
-        vim.keymap.set('n', '<F5>', dap.continue)
-        vim.keymap.set('n', '<F1>', dap.step_into)
-        vim.keymap.set('n', '<F2>', dap.step_over)
-        vim.keymap.set('n', '<F3>', dap.step_out)
-        vim.keymap.set('n', '<leader>B', dap.toggle_breakpoint)
-        vim.keymap.set('n', '<leader>Bc', function()
+        vim.keymap.set('n', '<leader>dc', dap.continue)
+        vim.keymap.set('n', '<leader>di', dap.step_into)
+        vim.keymap.set('n', '<leader>dn', dap.step_over)
+        vim.keymap.set('n', '<leader>do', dap.step_out)
+        vim.keymap.set('n', '<leader>db', dap.toggle_breakpoint)
+        vim.keymap.set('n', '<leader>dB', function()
             dap.set_breakpoint(vim.fn.input 'Breakpoint condition: ')
         end)
 
@@ -72,7 +73,7 @@ return {
             },
         }
         -- toggle to see last session result. Without this ,you can't see session output in case of unhandled exception.
-        vim.keymap.set("n", "<F7>", dapui.toggle)
+        vim.keymap.set("n", "<leader>dt", dapui.toggle)
 
         dap.listeners.after.event_initialized['dapui_config'] = dapui.open
         dap.listeners.before.event_terminated['dapui_config'] = dapui.close
@@ -80,5 +81,28 @@ return {
 
         -- Install golang specific config
         require('dap-go').setup()
+
+        -- LLDB via codelldb
+        local codelldb_config = {
+            {
+                name = 'Launch file',
+                type = 'codelldb',
+                request = 'launch',
+                program = function()
+                    return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                end,
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+            },
+            {
+                name = 'Attach to process',
+                type = 'codelldb',
+                request = 'attach',
+                pid = require('dap.utils').pick_process,
+                cwd = '${workspaceFolder}',
+            },
+        }
+
+        dap.configurations.odin = codelldb_config
     end,
 }
