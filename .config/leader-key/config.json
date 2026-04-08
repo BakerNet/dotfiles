@@ -10,25 +10,25 @@
       "type" : "application",
       "value" : "/Applications/Google Chrome.app"
     },
-    {
+     {
       "key" : "3",
       "type" : "application",
-      "value" : "/Applications/Obsidian.app"
+      "value" : "/Applications/Slack.app"
     },
     {
       "key" : "4",
       "type" : "application",
-      "value" : "/Applications/Discord.app"
+      "value" : "/Applications/Obsidian.app"
     },
     {
       "key" : "5",
       "type" : "application",
-      "value" : "/Applications/Spotify.app"
+      "value" : "/Applications/Discord.app"
     },
     {
       "key" : "6",
       "type" : "application",
-      "value" : ""
+      "value" : "/Applications/Spotify.app"
     },
     {
       "key" : "7",
@@ -44,6 +44,11 @@
       "key" : "9",
       "type" : "application",
       "value" : ""
+    },
+    {
+      "key" : ";",
+      "type" : "application",
+      "value" : "/Applications/Slack.app"
     },
     {
       "key" : "s",

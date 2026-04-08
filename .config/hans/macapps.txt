@@ -1,5 +1,5 @@
 karabiner-elements
-unnaturalscrollwheels
+linearmouse
 alt-tab
 ghostty
 leader-key
