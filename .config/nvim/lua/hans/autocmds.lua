@@ -1,3 +1,10 @@
+-- [[ Start treesitter highlighting for all filetypes with a parser ]]
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.hl.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

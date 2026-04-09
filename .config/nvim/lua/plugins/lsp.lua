@@ -196,6 +196,19 @@ local setup_lsp = function()
         ensure_installed = vim.tbl_keys(servers),
     }
 
+    -- Jails LSP for Jai (https://github.com/Jeamee/jails)
+    local jails_bin = vim.fn.expand("~/Projects/Jails/bin/jails")
+    if vim.fn.executable(jails_bin) == 1 then
+        vim.lsp.config('jails', {
+            cmd = { jails_bin },
+            filetypes = { 'jai' },
+            root_markers = { 'jails.json', 'build.jai' },
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+        vim.lsp.enable('jails')
+    end
+
     for _, method in ipairs({ 'textDocument/diagnostic', 'workspace/diagnostic' }) do
         local default_diagnostic_handler = vim.lsp.handlers[method]
         vim.lsp.handlers[method] = function(err, result, context)
