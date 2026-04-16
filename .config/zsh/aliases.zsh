@@ -18,4 +18,13 @@ alias gR="git rebase -i"
 alias gd="git diff"
 
 alias present="nvim -c PresentStart"
-alias myip="curl ifconfig.co"
+alias myip="curl -4 ifconfig.co"
+alias myipv6="curl -6 ifconfig.co"
+
+alias ls="ls -G"
+alias la="ls -laG"
+alias ll="ls -lG"
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'

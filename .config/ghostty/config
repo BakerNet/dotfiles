@@ -1,3 +1,5 @@
 font-family = Hack Nerd Font Mono
-theme = Nord
+font-feature = -liga
+font-feature = -calt
 font-size = 18
+theme = Nord
