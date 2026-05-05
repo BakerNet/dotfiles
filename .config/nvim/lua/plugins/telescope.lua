@@ -1,6 +1,7 @@
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
 local setup_telescope = function()
+    local lga_actions = require("telescope-live-grep-args.actions")
     require('telescope').setup {
         defaults = {
             mappings = {
@@ -24,6 +25,17 @@ local setup_telescope = function()
             advanced_git_search = {
                 -- fugitive or diffview
                 diff_plugin = "diffview",
+            },
+            live_grep_args = {
+                -- define mappings, e.g.
+                mappings = { -- extend mappings
+                    i = {
+                        ["<C-k>"] = lga_actions.quote_prompt(),
+                        ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob=\"\"" }),
+                        ["<C-t>"] = lga_actions.quote_prompt({ postfix = " -t " }),
+                        ["<C-l>"] = lga_actions.quote_prompt({ postfix = " -L " }),
+                    },
+                },
             }
         }
     }
