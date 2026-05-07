@@ -57,6 +57,18 @@ function zvm_after_select_vi_mode() {
   esac
 }
 
+# Colored man pages
+export LESS_TERMCAP_mb=$'\e[1;31m'   # begin blink (red)
+export LESS_TERMCAP_md=$'\e[1;32m'   # begin bold (green — headings)
+export LESS_TERMCAP_me=$'\e[0m'      # end bold/blink
+export LESS_TERMCAP_us=$'\e[4;34m'   # begin underline (blue — emphasized)
+export LESS_TERMCAP_ue=$'\e[0m'      # end underline
+export LESS_TERMCAP_so=$'\e[1;44;33m' # begin standout (search highlight)
+export LESS_TERMCAP_se=$'\e[0m'      # end standout
+
+source "$ZDOTDIR/aliases.zsh"
+source "$ZDOTDIR/prompt.zsh"
+
 # python venv
 python_venv() {
     MYVENV="./.venv"
@@ -69,17 +81,6 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd python_venv
 python_venv
 
-# Colored man pages
-export LESS_TERMCAP_mb=$'\e[1;31m'   # begin blink (red)
-export LESS_TERMCAP_md=$'\e[1;32m'   # begin bold (green — headings)
-export LESS_TERMCAP_me=$'\e[0m'      # end bold/blink
-export LESS_TERMCAP_us=$'\e[4;34m'   # begin underline (blue — emphasized)
-export LESS_TERMCAP_ue=$'\e[0m'      # end underline
-export LESS_TERMCAP_so=$'\e[1;44;33m' # begin standout (search highlight)
-export LESS_TERMCAP_se=$'\e[0m'      # end standout
-
-source "$ZDOTDIR/aliases.zsh"
 if [[ -f "$HOME/.zshrc_private" ]]; then
   source "$HOME/.zshrc_private"
 fi
-source "$ZDOTDIR/prompt.zsh"
