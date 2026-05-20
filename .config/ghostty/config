@@ -3,3 +3,5 @@ font-feature = -liga
 font-feature = -calt
 font-size = 18
 theme = Nord
+
+custom-shader = shaders/cursor.glsl
