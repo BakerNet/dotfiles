@@ -10,7 +10,7 @@
       "type" : "application",
       "value" : "/Applications/Google Chrome.app"
     },
-     {
+    {
       "key" : "3",
       "type" : "application",
       "value" : "/Applications/Slack.app"
@@ -33,7 +33,7 @@
     {
       "key" : "7",
       "type" : "application",
-      "value" : ""
+      "value" : "/Applications/Docker.app"
     },
     {
       "key" : "8",

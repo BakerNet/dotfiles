@@ -50,7 +50,7 @@ return {
         end
     },
     {
-        'sindrets/diffview.nvim',
+        'dlyongemallo/diffview-plus.nvim',
         config = function()
             vim.keymap.set('n', '<leader>gd', '<Cmd>DiffviewOpen<CR>', { desc = '[G]it [D]iff' })
             vim.keymap.set('n', '<leader>gq', '<Cmd>DiffviewClose<CR>', { desc = '[G]it Diff [Q]uit' })

@@ -111,5 +111,6 @@ return {
         }
 
         dap.configurations.odin = codelldb_config
+        dap.configurations.jai = codelldb_config
     end,
 }

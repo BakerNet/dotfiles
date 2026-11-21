@@ -1,11 +1,11 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "1962818"
-hash = "26db011a778f261d730d4f5f8bf24b3f"
+rev = "896fa5a"
+hash = "347cc6b190eb0c2fd60513cc7ae37412"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "1962818"
+rev = "896fa5a"
 hash = "7a4b4237223aaa94e589d1c01a23542a"
 
 [flavor]
